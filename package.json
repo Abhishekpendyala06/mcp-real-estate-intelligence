@@ -1,0 +1,50 @@
+{
+  "name": "mcp-real-estate-intelligence",
+  "version": "1.0.0",
+  "description": "Enterprise-grade Model Context Protocol server for real estate market intelligence",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src tests --max-warnings 0",
+    "lint:fix": "eslint src tests --fix",
+    "format": "prettier --write src tests",
+    "docker:build": "docker build -f docker/Dockerfile -t mcp-real-estate:latest ."
+  },
+  "keywords": [
+    "mcp",
+    "real-estate",
+    "property-valuation",
+    "market-analysis",
+    "ai-agents"
+  ],
+  "author": "Abhishek Pendyala",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "redis": "^4.6.0",
+    "winston": "^3.11.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.2.0"
+  }
+}
